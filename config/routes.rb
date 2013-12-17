@@ -1,4 +1,6 @@
 ForestListaker::Application.routes.draw do
+  resources :list_items
+
   resources :lists
 
   get "dashboard/index"

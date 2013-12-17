@@ -21,6 +21,9 @@ gem 'haml-rails'
 # Use Foundation
 gem 'foundation-rails'
 
+# Use acts_as_list
+gem 'acts_as_list'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

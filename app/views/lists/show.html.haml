@@ -1,8 +1,12 @@
 %p#notice= notice
 
 %p
-  %b Title:
-  = @list.title
+	%b Title:
+	= @list.title
+
+%ul 
+	- @list.list_items.each do |list_item|
+		%li= link_to list_item.title, list_item
 
 = link_to 'Edit', edit_list_path(@list)
 \|
