@@ -7,16 +7,11 @@
       %a{href: "#"}
         %span Menu
   %section.top-bar-section
-    / Right Nav Section
-    %ul.right
-      %li.active
-        %a{href: "#"} Right Nav Button Active
-      %li.has-dropdown
-        %a{href: "#"} Right Button with Dropdown
-        %ul.dropdown
-          %li
-            %a{href: "#"} First link in dropdown
     / Left Nav Section
     %ul.left
-      %li
-        %a{href: "#"} Left Nav Button
+      %li{class: ('has-dropdown' if @nav_lists.size > 0)}
+        = link_to "Lists", lists_path
+        - if @nav_lists.size > 0
+          %ul.dropdown
+            - @nav_lists.each do |list|
+              %li= link_to list.title, list
