@@ -4,6 +4,9 @@
 	%b Title:
 	= @list.title
 
+%p 
+	= link_to "New Item", new_list_item_path, remote: true, id: 'new_list_item_link'
+
 %ul 
 	- @list.list_items.each do |list_item|
 		%li= link_to list_item.title, list_item
